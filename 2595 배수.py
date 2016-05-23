@@ -1,28 +1,26 @@
+import math
 def small(N):
     i = 1
+    n = N
     while(True):
-        if(N>=10):
+        if(N<100):
             temp = N
-            a=temp/10
-            temp=temp-a
+            a=math.floor(temp/10)
+            temp=temp-(a*10)
             b=temp
             if(a==b):
-                return a*10+b
-        elif(N>=100):
-            temp = N
-            a = temp/100
-            temp = temp - a
-            b = temp/10
-            temp = temp - b
-            c = temp
-            if(a == b or b == c or c == a):
                 return N
-        elif (N>=1000):
-            return 0
-        elif (N>=10000):
-            return 0
+        elif(N>100 and N<1000):
+            temp = N
+            a = math.floor(temp/100)
+            temp = temp - (a*100)
+            b = math.floor(temp/10)
+            temp = temp - (b*10)
+            c = temp
+            if(b == c):
+                return N
         i += 1
-        N = N*i
+        N = n*i
         
     
 N = int(input('N='))
