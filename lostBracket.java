@@ -8,8 +8,8 @@ public class lostBracket {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
          
-        Scanner scan = new Scanner(System.in); // 문자 입력을 인자로 Scanner 생성
-        fomular = (scan.nextLine()); // 키보드 문자 입력
+        Scanner scan = new Scanner(System.in); 
+        fomular = (scan.nextLine()); 
         char []array = fomular.toCharArray();
         cache = new int[4];
         int start = 0; // 시작점 위치 or +, - 나온 후 시작점 위치 
